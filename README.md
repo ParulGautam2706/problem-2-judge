@@ -74,3 +74,4 @@ release — position bias alone can flip a "winner" call; use the both-orders-ag
 `compare_configs` (which already returns "tie" on disagreement) so a release only blocks on a
 verdict that held up under order-swapping, not a single roll of the dice.
 "# problem-2-judge" 
+"# problem2-judge" 
