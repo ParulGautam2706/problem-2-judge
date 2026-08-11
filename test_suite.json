@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tc1",
+    "input": "Summarize the plot of a story where a fisherman catches a magic fish that grants wishes, but each wish backfires.",
+    "system_prompt": "Write a 2-sentence summary suitable for a children's book blurb.",
+    "model_output": "A poor fisherman catches a talking fish who grants him three wishes, but each wish brings unexpected trouble instead of happiness. In the end, he learns that contentment matters more than getting everything he wants.",
+    "human_gold_score": 5
+  },
+  {
+    "id": "tc2",
+    "input": "What is the boiling point of water at sea level in Celsius?",
+    "system_prompt": "Answer factually in one sentence.",
+    "model_output": "Water boils at 90 degrees Celsius at sea level.",
+    "expected_output": "100 degrees Celsius",
+    "human_gold_score": 1
+  },
+  {
+    "id": "tc3",
+    "input": "Explain what a REST API is to a non-technical manager.",
+    "system_prompt": "Avoid jargon. Keep it under 4 sentences.",
+    "model_output": "A REST API is a way for two computer systems to talk to each other using standard web requests, similar to ordering from a menu at a restaurant -- you ask for something specific and get a specific response back. It lets different apps share data without needing to know how each other works internally. This makes it easier to connect tools like a website to a database or a mobile app to a server.",
+    "human_gold_score": 4
+  },
+  {
+    "id": "tc4",
+    "input": "List three benefits of unit testing.",
+    "system_prompt": "Answer as a bulleted list of exactly 3 items.",
+    "model_output": "Unit testing is generally a good practice in software engineering and many teams use it.",
+    "human_gold_score": 1
+  },
+  {
+    "id": "tc5",
+    "input": "Write a polite decline to a meeting invite due to a scheduling conflict.",
+    "system_prompt": "Keep it under 3 sentences, professional tone.",
+    "model_output": "Thanks for the invite -- unfortunately I have a conflict at that time. Could we find another slot later this week? Happy to work around your availability.",
+    "human_gold_score": 5
+  },
+  {
+    "id": "tc6",
+    "input": "What year did World War II end?",
+    "system_prompt": "Answer factually in one sentence.",
+    "model_output": "World War II ended in 1945.",
+    "expected_output": "1945",
+    "human_gold_score": 5
+  },
+  {
+    "id": "tc7",
+    "input": "Explain the difference between a list and a tuple in Python.",
+    "system_prompt": "Answer for a beginner, 2-3 sentences.",
+    "model_output": "Lists are mutable, meaning you can change their contents after creation, while tuples are immutable and cannot be changed once created. Both can hold a sequence of items of any type. Because tuples are immutable, they are often used for fixed collections of values.",
+    "human_gold_score": 5
+  },
+  {
+    "id": "tc8",
+    "input": "Give feedback on this cover letter opening: 'I am writing to apply for the position advertised on your website.'",
+    "system_prompt": "Give one specific, actionable piece of feedback.",
+    "model_output": "This opening is generic and doesn't grab attention -- consider starting with a specific achievement or a genuine connection to the company's mission instead.",
+    "human_gold_score": 4
+  },
+  {
+    "id": "tc9",
+    "input": "Is the Great Wall of China visible from space with the naked eye?",
+    "system_prompt": "Answer factually in one sentence, correcting any common misconception.",
+    "model_output": "Yes, the Great Wall of China is easily visible from space with the naked eye, unlike any other man-made structure.",
+    "human_gold_score": 1
+  },
+  {
+    "id": "tc10",
+    "input": "Draft a one-line commit message for a fix that resolves a null pointer exception in the login handler.",
+    "system_prompt": "Follow conventional commit format.",
+    "model_output": "fix(auth): handle null user object in login handler to prevent NPE",
+    "human_gold_score": 5
+  }
+]

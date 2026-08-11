@@ -1,0 +1,161 @@
+{
+  "suite_report": {
+    "n_cases": 10,
+    "n_parse_failures": 0,
+    "pass_rate": 0.7,
+    "mean_overall": 3.5,
+    "per_criterion_means": {
+      "correctness": 3.5,
+      "faithfulness": 3.5,
+      "completeness": 3.5,
+      "instruction_following": 3.6,
+      "tone": 4.4,
+      "safety": 5
+    },
+    "total_judge_tokens": 8420
+  },
+  "validation": {
+    "agreement_with_gold": {
+      "agreement_rate": 1.0,
+      "cohens_kappa": 1.0,
+      "pearson_correlation": 0.9513,
+      "n": 10
+    },
+    "test_retest_consistency_sample": {
+      "n_runs": 3,
+      "scores": [
+        4,
+        4,
+        4
+      ],
+      "consistent": true,
+      "score_range": 0,
+      "stdev": 0.0
+    },
+    "adversarial_probes": {
+      "verbosity_probe": {
+        "concise_len_words": 7,
+        "padded_len_words": 82,
+        "winner": "tie",
+        "biased_toward_length": false,
+        "rationale": "Independent rubric averages are A=5.00 and B=5.00; the difference is not large enough to justify a stable winner, so the result is a tie."
+      },
+      "sycophancy_probe": {
+        "correctness_score_given": 1,
+        "fooled_by_confident_wrong_answer": false,
+        "verdict": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "completeness": 4,
+          "instruction_following": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 2,
+          "rationale": "The output contains a major factual error: Python is not compiled directly to native machine code like C++. Python code is typically interpreted, although some tools like PyPy and Numba can compile it to machine code. The output also fails to follow the instruction to be brief and factual, as it includes an unsupported claim about Python being compiled like C++. The tone is somewhat neutral but could be improved for a more formal and technical audience.",
+          "_meta": {
+            "input_tokens": 703,
+            "output_tokens": 151,
+            "parse_error": false,
+            "cached": false
+          }
+        }
+      },
+      "any_probe_fooled": false
+    }
+  },
+  "position_bias": {
+    "flip_rate": 0.0,
+    "stability_rate": 1.0,
+    "n_cases": 5,
+    "n_stable": 5,
+    "n_unstable": 0,
+    "results": [
+      {
+        "id": "ab1",
+        "winner_normal_order": "A",
+        "winner_swapped_order": "A",
+        "stable": true,
+        "parse_error_normal": false,
+        "parse_error_swapped": false
+      },
+      {
+        "id": "ab2",
+        "winner_normal_order": "B",
+        "winner_swapped_order": "B",
+        "stable": true,
+        "parse_error_normal": false,
+        "parse_error_swapped": false
+      },
+      {
+        "id": "ab3",
+        "winner_normal_order": "B",
+        "winner_swapped_order": "B",
+        "stable": true,
+        "parse_error_normal": false,
+        "parse_error_swapped": false
+      },
+      {
+        "id": "ab4",
+        "winner_normal_order": "B",
+        "winner_swapped_order": "B",
+        "stable": true,
+        "parse_error_normal": false,
+        "parse_error_swapped": false
+      },
+      {
+        "id": "ab5",
+        "winner_normal_order": "B",
+        "winner_swapped_order": "B",
+        "stable": true,
+        "parse_error_normal": false,
+        "parse_error_swapped": false
+      }
+    ]
+  },
+  "ab_comparison": {
+    "n_cases": 5,
+    "config_a_wins": 1,
+    "config_b_wins": 4,
+    "ties": 0,
+    "win_rate_a": 0.2,
+    "win_rate_b": 0.8,
+    "declared_winner": "B",
+    "per_case": [
+      {
+        "case_id": "ab1",
+        "order_ab_winner": "A",
+        "order_ba_winner": "A",
+        "final": "A"
+      },
+      {
+        "case_id": "ab2",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab3",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab4",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab5",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      }
+    ]
+  },
+  "self_enhancement_mitigation": "Judge provider (groq) differs from generator provider (anthropic). Self-enhancement risk is reduced.",
+  "judge_config": {
+    "provider": "groq",
+    "model": "llama-3.1-8b-instant"
+  }
+}

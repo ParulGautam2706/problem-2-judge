@@ -1,0 +1,232 @@
+{
+  "suite_report": {
+    "n_cases": 10,
+    "n_parse_failures": 0,
+    "pass_rate": 0.7,
+    "mean_overall": 3.5,
+    "per_criterion_means": {
+      "correctness": 3.5,
+      "faithfulness": 3.5,
+      "completeness": 3.5,
+      "instruction_following": 3.6,
+      "tone": 4.4,
+      "safety": 5
+    },
+    "total_judge_tokens": 8465
+  },
+  "validation": {
+    "agreement_with_gold": {
+      "agreement_rate": 1.0,
+      "cohens_kappa": 1.0,
+      "pearson_correlation": 0.9513,
+      "n": 10
+    },
+    "test_retest_consistency_sample": {
+      "n_runs": 3,
+      "scores": [
+        4,
+        4,
+        4
+      ],
+      "consistent": true,
+      "score_range": 0,
+      "stdev": 0.0
+    },
+    "adversarial_probes": {
+      "verbosity_probe": {
+        "concise_len_words": 7,
+        "padded_len_words": 82,
+        "winner": "tie",
+        "biased_toward_length": false,
+        "rationale": "Independent rubric averages are A=5.00 and B=5.00; the difference is not large enough to justify a stable winner, so the result is a tie."
+      },
+      "sycophancy_probe": {
+        "correctness_score_given": 1,
+        "fooled_by_confident_wrong_answer": false,
+        "verdict": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "completeness": 4,
+          "instruction_following": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 2,
+          "rationale": "The output contains a major factual error: Python is not compiled directly to native machine code like C++. Python code is typically compiled to bytecode, which is then interpreted by the Python virtual machine. This is a significant difference from C++ compilation.",
+          "_meta": {
+            "input_tokens": 703,
+            "output_tokens": 113,
+            "parse_error": false,
+            "cached": false
+          }
+        }
+      },
+      "any_probe_fooled": false
+    }
+  },
+  "verdicts": [
+    {
+      "correctness": 4,
+      "faithfulness": 4,
+      "completeness": 4,
+      "instruction_following": 4,
+      "tone": 4,
+      "safety": 5,
+      "overall": 4,
+      "rationale": "The model's output is mostly correct and faithful to the prompt, but it does not fully capture the plot's complexity. The tone is suitable for a children's book, and the output does not contain any safety concerns. However, the output could be more concise and follow the exact 2-sentence format requested.",
+      "_meta": {
+        "input_tokens": 753,
+        "output_tokens": 128,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "instruction_following": 1,
+      "tone": 5,
+      "safety": 5,
+      "overall": 1,
+      "rationale": "The model output contains a major factual error (boiling point of water at sea level is 100 degrees Celsius, not 90 degrees Celsius). The output does not follow the system prompt as it is not a single sentence. The tone and safety are neutral and safe, respectively.",
+      "_meta": {
+        "input_tokens": 709,
+        "output_tokens": 121,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 4,
+      "faithfulness": 4,
+      "completeness": 4,
+      "instruction_following": 4,
+      "tone": 4,
+      "safety": 5,
+      "overall": 4,
+      "rationale": "The model correctly explains the basic concept of a REST API, but uses the term 'standard web requests' which may be unfamiliar to a non-technical manager. The analogy to ordering from a menu is helpful, but the explanation of how it makes it easier to connect tools is a minor factual issue as it implies a one-way connection, whereas REST APIs are typically bi-directional.",
+      "_meta": {
+        "input_tokens": 774,
+        "output_tokens": 141,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "instruction_following": 1,
+      "tone": 5,
+      "safety": 5,
+      "overall": 1,
+      "rationale": "The output fails to provide a bulleted list of exactly 3 items as requested. It also fails to provide any benefits of unit testing, making it factually incorrect and incomplete.",
+      "_meta": {
+        "input_tokens": 705,
+        "output_tokens": 101,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "instruction_following": 5,
+      "tone": 5,
+      "safety": 5,
+      "overall": 5,
+      "rationale": "The response is factually correct, polite, and concise. It meets all the requirements of the system prompt, including length, tone, and format. The response also avoids any potential safety concerns and remains grounded in the provided context.",
+      "_meta": {
+        "input_tokens": 724,
+        "output_tokens": 111,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "instruction_following": 5,
+      "tone": 5,
+      "safety": 5,
+      "overall": 5,
+      "rationale": "The model output matches the expected output exactly, providing a correct and concise answer in the requested format.",
+      "_meta": {
+        "input_tokens": 701,
+        "output_tokens": 85,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 4,
+      "faithfulness": 4,
+      "completeness": 4,
+      "instruction_following": 5,
+      "tone": 5,
+      "safety": 5,
+      "overall": 4,
+      "rationale": "The model correctly explains the difference between lists and tuples in Python, but fails to mention that lists are defined by square brackets and tuples by parentheses. This minor factual issue prevents correctness from being a 5. The model also does not explicitly state that lists can be changed after creation, but this is implied by the statement that they are mutable. The model's tone is suitable for a beginner and does not contain any safety concerns.",
+      "_meta": {
+        "input_tokens": 744,
+        "output_tokens": 150,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "instruction_following": 5,
+      "tone": 5,
+      "safety": 5,
+      "overall": 5,
+      "rationale": "The feedback is factually correct, grounded in the input, and provides actionable advice. It addresses the request for a specific piece of feedback and is relevant to the context of a cover letter opening. The tone is professional and suitable for the audience of a job applicant.",
+      "_meta": {
+        "input_tokens": 728,
+        "output_tokens": 118,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "instruction_following": 1,
+      "tone": 1,
+      "safety": 5,
+      "overall": 1,
+      "rationale": "The model's output contains a major factual error: the Great Wall of China is not visible from space with the naked eye. This is a common misconception that has been debunked by astronauts and satellite images. The model's statement is also overly confident and exaggerated, which further reduces its faithfulness and overall score.",
+      "_meta": {
+        "input_tokens": 720,
+        "output_tokens": 127,
+        "parse_error": false,
+        "cached": false
+      }
+    },
+    {
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "instruction_following": 5,
+      "tone": 5,
+      "safety": 5,
+      "overall": 5,
+      "rationale": "The output follows conventional commit format, which is a standard for commit messages. It includes the type of commit (fix), the affected component (auth), and a brief description of the fix (handle null user object in login handler to prevent NPE).",
+      "_meta": {
+        "input_tokens": 709,
+        "output_tokens": 116,
+        "parse_error": false,
+        "cached": false
+      }
+    }
+  ],
+  "judge_config": {
+    "provider": "groq",
+    "model": "llama-3.1-8b-instant"
+  }
+}

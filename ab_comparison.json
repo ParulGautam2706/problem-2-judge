@@ -1,0 +1,24 @@
+{
+  "description": "Config A = terse prompt v1 (no explicit format instruction). Config B = prompt v2 (explicit format + tone instructions). Same 5 inputs, real output differences to judge.",
+  "test_cases": [
+    {"id": "ab1", "input": "Explain what caching is."},
+    {"id": "ab2", "input": "Explain what a load balancer does."},
+    {"id": "ab3", "input": "Explain what an index is in a database."},
+    {"id": "ab4", "input": "Explain what a race condition is."},
+    {"id": "ab5", "input": "Explain what idempotency means in an API."}
+  ],
+  "config_a_outputs": {
+    "ab1": "Caching stores frequently accessed data in a fast-access layer so future requests for that data are served quicker instead of recomputing or refetching it every time.",
+    "ab2": "A load balancer distributes incoming network traffic across multiple servers so no single server gets overwhelmed, improving availability and response time.",
+    "ab3": "A database index is a data structure that improves the speed of data retrieval on a table, at the cost of additional storage and slower writes.",
+    "ab4": "A race condition happens when two or more operations access shared data concurrently and the outcome depends on the unpredictable timing of their execution.",
+    "ab5": "Idempotency means that making the same API call multiple times produces the same result as making it once, which is important for safely retrying failed requests."
+  },
+  "config_b_outputs": {
+    "ab1": "**Caching**, in short: it's a technique for storing frequently-used data somewhere fast (like memory) so you don't have to redo expensive work every time. Example: a website caching a rendered page instead of regenerating it on every visit. Trade-off: cached data can go stale, so you need an invalidation strategy.",
+    "ab2": "**Load balancer**, in short: a component that spreads incoming requests across multiple backend servers. Example: a load balancer sending 1000 requests/sec across 5 web servers, ~200 each. Trade-off: adds a bit of latency and is itself a potential single point of failure unless made redundant.",
+    "ab3": "**Database index**, in short: a lookup structure (often a B-tree) that lets the database find rows without scanning the whole table. Example: an index on `email` makes `WHERE email = ...` queries fast. Trade-off: every index speeds up reads but slows down writes and uses extra disk space.",
+    "ab4": "**Race condition**, in short: a bug where the result depends on which of two concurrent operations 'wins' the timing race. Example: two threads incrementing the same counter without locking can lose an update. Trade-off: fixing it (locks, atomics) adds complexity and can hurt throughput.",
+    "ab5": "**Idempotency**, in short: calling an operation once or many times has the same effect. Example: `PUT /user/5 {name: 'A'}` is idempotent; `POST /charge-card` usually isn't unless you add an idempotency key. Trade-off: designing for idempotency sometimes requires extra state (like dedup keys)."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ab_comparison": {
+    "n_cases": 5,
+    "config_a_wins": 0,
+    "config_b_wins": 4,
+    "ties": 1,
+    "win_rate_a": 0.0,
+    "win_rate_b": 0.8,
+    "declared_winner": "B",
+    "per_case": [
+      {
+        "case_id": "ab1",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab2",
+        "order_ab_winner": "B",
+        "order_ba_winner": "A",
+        "final": "tie"
+      },
+      {
+        "case_id": "ab3",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab4",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      },
+      {
+        "case_id": "ab5",
+        "order_ab_winner": "B",
+        "order_ba_winner": "B",
+        "final": "B"
+      }
+    ]
+  },
+  "position_bias": {
+    "flip_rate": 0.2,
+    "n_cases": 5,
+    "details": [
+      {
+        "case_id": "ab1",
+        "winner_order_ab": "B",
+        "winner_order_ba": "B",
+        "flipped": false
+      },
+      {
+        "case_id": "ab2",
+        "winner_order_ab": "B",
+        "winner_order_ba": "A",
+        "flipped": true
+      },
+      {
+        "case_id": "ab3",
+        "winner_order_ab": "B",
+        "winner_order_ba": "B",
+        "flipped": false
+      },
+      {
+        "case_id": "ab4",
+        "winner_order_ab": "B",
+        "winner_order_ba": "B",
+        "flipped": false
+      },
+      {
+        "case_id": "ab5",
+        "winner_order_ab": "B",
+        "winner_order_ba": "B",
+        "flipped": false
+      }
+    ]
+  },
+  "judge_config": {
+    "provider": "openai",
+    "model": "llama-3.3-70b-versatile"
+  }
+}
