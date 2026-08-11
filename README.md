@@ -5,13 +5,19 @@ sycophancy bias mitigations built in and measured, not just discussed.
 
 ## Setup
 bash
+
 pip install -r requirements.txt
+
 export ANTHROPIC_API_KEY=sk-...
+
 ## Optional: judge a different model family than whatever generated the outputs, to mitigate self-enhancement bias:
 
 export JUDGE_PROVIDER=openai
+
 export OPENAI_API_KEY=sk-...
+
 python run_pipeline.py
+
 Everything (judge provider/model, generator provider/model) is env-configured - no hardcoded secrets.
 
 ## Judging modes implemented
